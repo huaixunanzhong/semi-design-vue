@@ -8,10 +8,12 @@ import eslintConfigPrettier from 'eslint-config-prettier';
 const ignores = ['**/dist/**', '**/node_modules/**', '.*', 'scripts/**', '**/*.d.ts'];
 
 export default [
+  eslint.configs.recommended,
+  ...tseslint.configs.recommended,
+  eslintConfigPrettier,
   // 通用配置
   {
     ignores, // 忽略项
-    extends: [eslint.configs.recommended, ...tseslint.configs.recommended, eslintConfigPrettier], // 继承规则
     plugins: {
       prettier: eslintPluginPrettier
     },
