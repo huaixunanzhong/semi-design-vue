@@ -1,0 +1,4 @@
+# 指定 pnpm 工作区的子包路径
+packages:
+    - 'packages/*'
+    - 'apps/*'
